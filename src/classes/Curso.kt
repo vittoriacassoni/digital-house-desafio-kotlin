@@ -1,8 +1,9 @@
 package classes
 
-class Curso(var nomeCurso: String, var codigo: Int, var professorTitular: ProfessorTitular,
-            var professorAdjunto: ProfessorAdjunto, var quantidadeMaximaAlunos: Int) {
+class Curso(var nomeCurso: String, var codigo: Int, var quantidadeMaximaAlunos: Int) {
     var alunos = mutableListOf<Aluno>()
+    lateinit var professorTitular: ProfessorTitular
+    lateinit var professorAdjunto: ProfessorAdjunto
 
     fun adicionarUmAluno(umAluno: Aluno): Boolean{
         try {
